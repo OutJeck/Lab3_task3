@@ -44,7 +44,7 @@ def coordinates(data):
     return lst
 
 
-def creating_map(data):
+def creating_map(data, inpt):
     """
     lst -> str
     Returns the created map,
@@ -63,7 +63,7 @@ def creating_map(data):
             icon=folium.Icon(color='blue', icon='info-sign')).add_to(fg)
     fg.add_to(m)
     folium.LayerControl().add_to(m)
-    m.save('templates/map.html')
+    m.save(f'mysite/templates/{inpt}_map.html')
     return 'Finished.'
 
 
@@ -93,7 +93,7 @@ def creating_app(inpt):
         j_read = json.loads(data)
         f_info = find_info(j_read)
         coo = coordinates(f_info)
-        c_map = creating_map(coo)
+        c_map = creating_map(coo, inpt)
         return c_map
 
 
