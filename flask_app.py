@@ -6,7 +6,9 @@ app = Flask(__name__)
 @app.route("/", methods=["GET", "POST"])
 def index():
     if request.method == "POST":
-        MAIN.creating_app(request.form['contents'])
+        global name
+        name = request.form['contents']
+        MAIN.creating_app(name)
         return redirect(url_for('map'))
     if request.method == "GET":
         return render_template("mysite.html")
@@ -14,4 +16,4 @@ def index():
 
 @app.route("/map", methods=["GET"])
 def map():
-    return render_template("map.html")
+    return render_template(f"{name}_map.html")
