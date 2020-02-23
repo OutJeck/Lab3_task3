@@ -50,7 +50,7 @@ def creating_map(data):
     Returns the created map,
     which displays the analyzed information.
     """
-    m = folium.Map(zoom_start=3)
+    m = folium.Map(zoom_start=6)
     tooltip = '<b>Name<b>'
     fg = folium.FeatureGroup(name="markers")
 
@@ -63,11 +63,11 @@ def creating_map(data):
             icon=folium.Icon(color='blue', icon='info-sign')).add_to(fg)
     fg.add_to(m)
     folium.LayerControl().add_to(m)
-    m.save('twitter_friends_map.html')
+    m.save('templates/map.html')
     return 'Finished.'
 
 
-def creating_app():
+def creating_app(inpt):
     """
     Create App and get the four strings, put them in hidden.py
     This app shows the location of friends twitter account.
@@ -81,7 +81,7 @@ def creating_app():
 
     while True:
         print('')
-        acct = input('Enter Twitter Account:')
+        acct = inpt
         if len(acct) < 1:
             break
         url = twurl.augment(twitter_url,
@@ -98,4 +98,5 @@ def creating_app():
 
 
 if __name__ == '__main__':
-    print(creating_app())
+    inp = input('Enter twitter acc: ')
+    print(creating_app(inp))
