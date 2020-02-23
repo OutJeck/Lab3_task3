@@ -22,3 +22,4 @@ Process finished with exit code 0
 ## Output on the map
 
 
+![txt](https://github.com/OutJeck/Lab3_task3/blob/master/output_example.png "example")
