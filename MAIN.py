@@ -50,7 +50,7 @@ def creating_map(data, inpt):
     Returns the created map,
     which displays the analyzed information.
     """
-    m = folium.Map(zoom_start=6)
+    m = folium.Map([49.608716, 6.118481], zoom_start=2)
     tooltip = '<b>Name<b>'
     fg = folium.FeatureGroup(name="markers")
 
