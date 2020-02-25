@@ -1,5 +1,9 @@
 # Laboratory 3, task 3
 
+## Important information
+
+Please paste your API keys into hidden.py!!!
+
 ## About the module
 
 This module, using the api key of the twitter, receives information about the friends of the specified person in twitter, and displays the location of friends on the map.

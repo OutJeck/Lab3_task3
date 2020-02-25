@@ -5,7 +5,11 @@
 
 
 def oauth():
-    return {"consumer_key": "XE3o7dhex8sQJS4Vtrmk4sgJq",
-            "consumer_secret": "qKiW2YzN8gHoK013aQqN3BxEkHcESbU8uoeiJAKlt0z021SB0T",
-            "token_key": "2314653424-f8hxO4srQEX7KMRMrJ9FqWUqT4ZMPgTWAFp5t2Y",
-            "token_secret": "meW1z86BgSWfC5h8Kz8AQuaI21mTksBi7SS8XAgiqNRjn"}
+    """
+    Returns API key for the next calculation.
+    Please Enter your keys HERE.
+    """
+    return {"consumer_key": "Insert consumer key HERE",
+            "consumer_secret": "Insert consumer secret HERE",
+            "token_key": "Insert token key HERE",
+            "token_secret": "Insert token secret HERE"}
